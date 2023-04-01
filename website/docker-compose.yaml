@@ -1,0 +1,23 @@
+---
+version: '3'
+
+services:
+
+  # development server
+  dev:
+    image: node:18
+    command: sh -c 'yarn && yarn dev'
+    volumes:
+      - .:/opt/stopai/website
+    working_dir: /opt/stopai/website
+    ports:
+      - 8080:8080
+    environment:
+      # fix error: digital envelope routines::initialization error ERR_OSSL_EVP_UNSUPPORTED
+      NODE_OPTIONS: --openssl-legacy-provider
+
+  # static page
+  build:
+    build: .
+    ports:
+      - 8081:80

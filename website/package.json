@@ -1,5 +1,5 @@
 {
-  "name": "stopai/website",
+  "name": "stopai-website",
   "version": "0.0.1",
   "description": "Shut it all down!",
   "main": "index.js",
