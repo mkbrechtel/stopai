@@ -1,0 +1,19 @@
+{
+  "name": "stopai/docs",
+  "version": "0.0.1",
+  "description": "Developer documentation for the StopAI project",
+  "main": "index.js",
+  "authors": {
+    "name": "StopAI.global project",
+    "email": "docs@stopai.global"
+  },
+  "repository": "https://github.com/mkbrechtel/stopai/stopai/docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
