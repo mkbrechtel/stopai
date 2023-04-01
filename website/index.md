@@ -2,7 +2,7 @@
 home: true
 heroImage: /stopai.svg
 tagline: Shut it all down!
-actionText: Quick Start →
+actionText: Why? Learn more! →
 actionLink: /guide/
 features:
 - title: Feature 1 Title
