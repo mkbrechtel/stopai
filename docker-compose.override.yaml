@@ -1,0 +1,11 @@
+---
+# Docker compose overrides for development
+version: '3'
+
+services:
+  website:
+    command: yarn dev
+    volumes:
+      - ./website:/mnt/stopai/website
+      - ./content:/mnt/stopai/content
+    working_dir: /mnt/stopai/website
