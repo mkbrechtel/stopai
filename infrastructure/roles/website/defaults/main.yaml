@@ -1,0 +1,3 @@
+---
+
+website_service_name: "{{ stopai_domain }}"
