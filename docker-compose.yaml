@@ -3,11 +3,5 @@ version: '3'
 
 services:
 
-  # development server
   website:
-    # build:
-    #   context: .
-    #   dockerfile: website/Dockerfile
-    image: node:18
-    ports:
-      - 8080:8080
+    build: website/

@@ -1,10 +1,7 @@
 FROM node:18
 
-WORKDIR /srv/stopai/website
+WORKDIR /app
 
-COPY package.json /srv/stopai/website/
+COPY package.json yarn.lock ./
 
-
-
-
-RUN yarn install
+RUN yarn install --frozen-lockfile

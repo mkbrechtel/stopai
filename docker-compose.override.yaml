@@ -4,8 +4,9 @@ version: '3'
 
 services:
   website:
-    command: yarn dev
+    command: sh -c "rm -rf node_modules && cp -r /app/node_modules /mnt/app/node_modules && yarn dev"
     volumes:
-      - ./website:/mnt/stopai/website
-      - ./content:/mnt/stopai/content
-    working_dir: /mnt/stopai/website
+      - ./website:/mnt/app
+    working_dir: /mnt/app
+    ports:
+      - 5173:5173
