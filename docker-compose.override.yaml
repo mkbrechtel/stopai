@@ -4,7 +4,7 @@ version: '3'
 
 services:
   website:
-    command: sh -c "rm -rf node_modules && cp -r /app/node_modules /mnt/app/node_modules && yarn dev"
+    command: sh -c "rm -rf node_modules && cp -r /app/node_modules /mnt/app/node_modules && yarn dev --host 0.0.0.0"
     volumes:
       - ./website:/mnt/app
     working_dir: /mnt/app
