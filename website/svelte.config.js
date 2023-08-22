@@ -1,12 +1,14 @@
 import adapter from '@sveltejs/adapter-auto';
 import { mdsvex } from "mdsvex";
 import mdsvexConfig from './mdsvex.config.js';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     extensions: ['.svelte', '.md', '.svx'],
     preprocess: [
-        mdsvex(mdsvexConfig),
+		mdsvex(mdsvexConfig),
+		vitePreprocess(),
     ],
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.

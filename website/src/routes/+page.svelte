@@ -1,7 +1,4 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Homepage from '../../content/homepage.md';
 </script>
 
@@ -10,53 +7,42 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<Homepage />
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+<section class="bg-gray-50">
+	<div
+	  class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
+	>
+		<div class="mx-auto max-w-xl text-center">
+			<h1 class="text-3xl font-extrabold sm:text-5xl">
+			Understand User Flow.
+			<strong class="font-extrabold text-red-700 sm:block">
+				Increase Conversion.
+			</strong>
+			</h1>
+	
+			<p class="mt-4 sm:text-xl/relaxed">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+				tenetur fuga ducimus numquam ea!
+			</p>
+	
+			<div class="mt-8 flex flex-wrap justify-center gap-4">
+			<a
+				class="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+				href="/get-started"
+			>
+				Get Started
+			</a>
+	
+			<a
+				class="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+				href="/about"
+			>
+				Learn More
+			</a>
+			</div>
+		</div>
+	</div>
 </section>
 
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<article class="prose lg:prose-xl mx-5 my-5 px-10 py-6">
+	<Homepage />
+</article>
