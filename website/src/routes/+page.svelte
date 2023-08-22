@@ -1,5 +1,5 @@
 <script>
-	import Homepage from '../../content/homepage.md';
+	import Homepage from '../../../content/homepage.md';
 </script>
 
 <svelte:head>

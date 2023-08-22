@@ -4,4 +4,7 @@ version: '3'
 services:
 
   website:
-    build: website/
+    build:
+      context: .
+      target: website
+
